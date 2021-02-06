@@ -5,5 +5,5 @@ export const saveTodo = (todo) => {
 };
 
 export const loadTodos = () => {
-  axios.get("http://localhost:3030/api/todos");
+  return axios.get("http://localhost:3030/api/todos");
 };

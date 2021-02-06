@@ -33,14 +33,12 @@ export default class TodoApp extends Component {
         this.setState({ error: true });
       });
   }
-  /*
 
   componentDidMount() {
     loadTodos().then(({ data }) => {
       this.setState({ todos: data });
     });
   }
-*/
 
   handleNewTodoChange(evt) {
     this.setState({ currentTodo: evt.target.value });
