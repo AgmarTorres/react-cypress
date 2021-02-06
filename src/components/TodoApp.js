@@ -29,15 +29,15 @@ export default class TodoApp extends Component {
           currentTodo: "",
         });
       })
-      .catch(() => {
-        this.setState({ error: true });
-      });
+      .catch(() => this.setState({ error: true }));
   }
 
   componentDidMount() {
-    loadTodos().then(({ data }) => {
-      this.setState({ todos: data });
-    });
+    loadTodos()
+      .then(({ data }) => {
+        this.setState({ todos: data });
+      })
+      .catch(() => this.setState({ error: true }));
   }
 
   handleNewTodoChange(evt) {
